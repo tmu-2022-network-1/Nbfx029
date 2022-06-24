@@ -1,3 +1,20 @@
 * {
     font-family: 'Courier New', Courier, monospace;
 }
+
+p{
+    font-size:5em;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	color: transparent;
+	background: repeating-linear-gradient(45deg,
+		#F5B090 0.1em 0.2em,
+		#FCD7A1 0.2em 0.3em,
+		#FFF9B1 0.3em 0.4em,
+		#A5D4AD 0.4em 0.5em,
+		#A3BCE2 0.5em 0.6em,
+		#A59ACA 0.7em 0.8em,
+		#CFA7CD 0.8em 0.9em);
+        background-clip: text;
+}
