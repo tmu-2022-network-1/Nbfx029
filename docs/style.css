@@ -5,6 +5,7 @@
 
 html{
 	height: 100%;
+	background-image: url(images/noise.png);
 }
 
 body{
@@ -14,8 +15,31 @@ body{
 	align-items: center;
 }
 
+/*#wear{
+	background-image: url(images/wear.png);
+	z-index: 2;
+	position: fixed;
+	height: 800px;
+	width: 800px;
+	background-position: center;
+	margin-top: 1800px;
+	margin-right: 60px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#hair{
+	background-image: url(images/hair.png);
+	z-index: 2;
+	position: fixed;
+	height: 1000px;
+	width: 1000px;
+	background-position: center;
+	margin-top: 700px;
+}
+*/
 #kao00{
-	background-image: url(images/kao00.png);
+	background-image: url(images/kao000.png);
 	width: 0;
 	height: 0;
 	background-repeat: no-repeat;
