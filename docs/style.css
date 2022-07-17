@@ -1,11 +1,11 @@
 *{
-	margin: 600px 0 3000px 0 ;
+	margin: 0;
 	padding: 0;
 }
 
 html{
 	height: 100%;
-	background-image: url(images/noise.png);
+	background-color: rgb(29, 29, 29);
 }
 
 body{
@@ -15,49 +15,23 @@ body{
 	align-items: center;
 }
 
-/*#wear{
-	background-image: url(images/wear.png);
-	z-index: 2;
-	position: fixed;
-	height: 800px;
-	width: 800px;
-	background-position: center;
-	margin-top: 1800px;
-	margin-right: 60px;
-	background-repeat: no-repeat;
-	background-size: 100%;
+@keyframes blur{
+	from {
+        filter: blur(10px);
+    }
+    
+    to {
+        filter: blur(0);
+    }
 }
 
-#hair{
-	background-image: url(images/hair.png);
-	z-index: 2;
-	position: fixed;
-	height: 1000px;
-	width: 1000px;
-	background-position: center;
-	margin-top: 700px;
-}
-*/
-#kao00{
-	background-image: url(images/kao000.png);
-	width: 0;
-	height: 0;
+.danger{
+	background-image: url(images/danger.png);
 	background-repeat: no-repeat;
-	background-size: 100%;
 	background-position: center;
-	position: fixed;
-	opacity: 1;
-	z-index: 1;
+	width: 400px;
+	height: 400px;
+	animation: blur 3s both ease-in;
 }
 
-#kao01{
-	background-image: url(images/kao01.png);
-	width: 0;
-	height: 0;
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-position: center;
-	position: fixed;
-	opacity: 1;
-	z-index: 0;
-}
+
