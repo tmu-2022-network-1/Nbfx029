@@ -4,34 +4,35 @@
 }
 
 html{
-	height: 100%;
-	background-color: rgb(29, 29, 29);
+	background-color: rgba(32, 32, 32, 0.966);
+	height: 10000px;
 }
 
 body{
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+
 }
 
-@keyframes blur{
-	from {
-        filter: blur(10px);
+.sign{
+	background: url(images/sign2.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 30%;
+	height: 100%;
+	position: fixed;
+	animation: blur 3s both ease-in;
+}
+
+@keyframes blur {
+    from {
+        filter: blur(100px);
     }
     
     to {
         filter: blur(0);
     }
-}
-
-.danger{
-	background-image: url(images/danger.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 400px;
-	height: 400px;
-	animation: blur 3s both ease-in;
 }
 
 
