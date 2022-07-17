@@ -4,7 +4,9 @@
 }
 
 html{
-	background-color: rgba(32, 32, 32, 0.966);
+	background: -moz-linear-gradient(top, #da621c, rgb(29, 10, 4));
+    background: -webkit-linear-gradient(top, #da621c, rgb(29, 10, 4));
+    background: linear-gradient(to bottom, #da621c, rgb(29, 10, 2));
 	height: 10000px;
 }
 
@@ -15,24 +17,29 @@ body{
 
 }
 
-.sign{
+#sign{
 	background: url(images/sign2.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	width: 30%;
-	height: 100%;
+	width:500px;
+	height: 1000px;
 	position: fixed;
-	animation: blur 3s both ease-in;
 }
 
-@keyframes blur {
-    from {
-        filter: blur(100px);
-    }
-    
-    to {
-        filter: blur(0);
-    }
+.sa{
+	opacity: 0;
+	transition: all 1s ease;
+	filter: blur(10px);
+}
+
+.sa.show{
+	opacity: 1;
+	transform: none;
+	filter: blur(0px);
+}
+
+.sa-naname{
+	transform: translate(0, -500px);
 }
 
 
