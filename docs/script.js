@@ -27,7 +27,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: '#mado',
   start: 'top 800px',
-  end: 'bottom 200px',
+  end: 'bottom top',
   toggleClass: {targets: "#mado", className: "show"},
 });
 
@@ -51,6 +51,18 @@ gsap.to("#mado", {
     trigger: "#mado",
     start: 'top center',
     end: '+=500',
+  }
+});
+
+gsap.to("#jiong",{
+  duration: 4,
+  ease: "slow(1, 1, false)",
+  x: 1600,
+  y: 500,
+  scrollTrigger:{
+    trigger: "#jiong",
+    start: 'top center',
+    end: '+=500px',
     markers: true,
   }
 });
