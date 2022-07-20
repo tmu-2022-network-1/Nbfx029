@@ -7,16 +7,20 @@ var scrollAnimationFunc = function() {
     if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + 700) {
       scrollAnimationElm[i].classList.add('show');
     }
+    
     if(window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + 750){
       scrollAnimationElm[i].classList.remove('show');
     }
-    if(window.innerHeight < scrollAnimationElm[i].getBoundingClientRect().top){
+    if(window.innerHeight < scrollAnimationElm[i].getBoundingClientRect().top + 50){
       scrollAnimationElm[i].classList.remove('show');
     }
+    
   }
 }
 window.addEventListener('scroll', scrollAnimationFunc);
 */
+
+
 ScrollTrigger.create({
   trigger: '#sora',
   start: 'top 800px',
@@ -24,12 +28,14 @@ ScrollTrigger.create({
   toggleClass: {targets: "#sora", className: "show"},
 });
 
+
 ScrollTrigger.create({
   trigger: '#mado',
   start: 'top 800px',
   end: 'bottom top',
   toggleClass: {targets: "#mado", className: "show"},
 });
+
 
 gsap.to("#hu", {
   autoAlpha: 1,
@@ -44,6 +50,7 @@ gsap.to("#hu", {
   }
 });
 
+/*
 gsap.to("#mado", {
   rotation: 30,
   duration: 2.5,
@@ -51,19 +58,36 @@ gsap.to("#mado", {
     trigger: "#mado",
     start: 'top center',
     end: '+=500',
+    markers: true
   }
 });
+*/
+
+for(var i = 0; i < 10; i++){
+  var newDiv = document.createElement("div");
+  newDiv.textContent = '囧';
+  newDiv.id = ('jiong');
+  
+  var childDiv = document.createElement("div");
+  childDiv.textContent = '水';
+  childDiv.id = ('water');
+
+  var element = document.getElementById("spawner");
+  document.body.insertBefore(newDiv, element);
+
+  newDiv.insertBefore(childDiv, newDiv.firstChild);
+}
 
 gsap.to("#jiong",{
   duration: 4,
   ease: "slow(1, 1, false)",
-  x: 1600,
-  y: 500,
+  x: "random(300, 1600)",
+  y: "random(200, 800)",
   scrollTrigger:{
     trigger: "#jiong",
+    toggleActions: 'play reverse play reverse',
     start: 'top center',
-    end: '+=500px',
-    markers: true,
+    end: '+=900px',
   }
 });
 
@@ -73,3 +97,13 @@ gsap.to("#jiong",{
   
   elem00.style.filter.blur =  scrollY + 'px';
 });*/
+
+for(var i = 0; i < 5; i++){
+var newDiv = document.createElement("div");
+newDiv.textContent = '.:*ゅゆ';
+newDiv.id = ('silverFish');
+
+var parentDiv = document.getElementById("spawner");
+parentDiv.insertBefore(newDiv, parentDiv.firstChild);
+}
+
