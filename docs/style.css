@@ -150,12 +150,14 @@ img{
 	}
 }
 
-@keyframes yureru{
+@keyframes push{
 	from{
-		transform: rotate(20deg);
+		transform: scale(1, 1);
+		text-shadow: 0 5px 5px rgb(15, 15, 15);
 	}
 	to{
-		transform: rotate(-20deg);
+		transform: scale(0.7, 0.7);
+		text-shadow: none;
 	}
 }
 
@@ -180,10 +182,32 @@ img{
 	transform: translate(0, 0) scale(2.0, 1.0);
 }
 
-#kou{
+.svgWrapper{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 800px;
 	position: absolute;
-	top: 3000px;
-	width: 200px;
+	top: 3600px;
+}
+
+.start{
+	font-size: 100px;
+	width: 100px;
+	text-shadow: 0 3px 5px rgb(15, 15, 15);
+	opacity: 0.8;
+}
+
+.start:hover{
+	animation: push 1s infinite alternate;
+}
+
+#kou{
+	width: 100vw;
 	height: 200px;
 }
 

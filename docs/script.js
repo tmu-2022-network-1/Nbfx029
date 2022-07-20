@@ -81,7 +81,7 @@ for(var i = 0; i < 10; i++){
 gsap.to("#jiong",{
   duration: 4,
   ease: "slow(1, 1, false)",
-  x: "random(300, 1600)",
+  x: "random(200, 1500, 10)",
   y: "random(200, 800)",
   scrollTrigger:{
     trigger: "#jiong",
@@ -90,6 +90,14 @@ gsap.to("#jiong",{
     end: '+=900px',
   }
 });
+
+document.querySelector('.start').addEventListener('click',()=>{
+  gsap.to('#top',{
+    duration: 0.3,
+    stagger: 0.3,
+    x: "random([-200, -100, 100, 200])"
+  })
+})
 
 /*window.addEventListener('scroll', () => {
   let elem00 = document.getElementById('sign');
