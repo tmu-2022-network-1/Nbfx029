@@ -20,6 +20,16 @@ var scrollAnimationFunc = function() {
 window.addEventListener('scroll', scrollAnimationFunc);
 */
 
+const pageTopBtn = document.getElementById('title');
+pageTopBtn.addEventListener("click", function () {
+  const me = arguments.callee;
+  const nowY = window.pageYOffset;
+  window.scrollTo(0, Math.floor(nowY * 0.9));
+  if (nowY > 0) {
+    window.setTimeout(me, 10);
+  }
+});
+
 ScrollTrigger.create({
   trigger: '#sora',
   start: 'top 800px',
@@ -35,6 +45,19 @@ ScrollTrigger.create({
   toggleClass: {targets: "#mado", className: "show"},
 });
 
+gsap.to("#title",{
+  autoAlpha: 0.7,
+  x: -240,
+  y: -250,
+  scale: 0.2,
+  scrollTrigger:{
+    trigger: "#titleTrigger",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true,
+    markers: true
+  }
+})
 
 gsap.to("#hu", {
   autoAlpha: 1,
@@ -75,7 +98,7 @@ gsap.to("#mado", {
 });
 */
 
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 30; i++){
   var newDiv = document.createElement("div");
   newDiv.textContent = '囧';
   newDiv.id = ('jiong');
@@ -94,7 +117,7 @@ gsap.to("#jiong",{
   duration: 4,
   ease: "slow(1, 1, false)",
   x: "random(200, 1500, 10)",
-  y: "random(200, 800)",
+  y: "random(-400, 800)",
   scrollTrigger:{
     trigger: "#jiong",
     toggleActions: 'play reverse play reverse',
