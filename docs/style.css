@@ -21,6 +21,7 @@ body{
 	font-family: 'Hina Mincho', serif;
 	background: url(images/texture2.png);
 	user-select: none;
+	overflow-x: hidden;
 }
 
 #title{
@@ -92,8 +93,12 @@ body{
 	right: 70px;
 	transition: 1s;
 	z-index: 9;
-	animation: blur 0.5s both ease-in;
+	filter: blur(100px);
 	cursor: pointer;
+}
+
+.appear{
+	animation: blur 0.5s both ease-in;
 }
 
 #text{
@@ -106,18 +111,34 @@ body{
 	font-size: 12px;
 	transform: perspective(50px) rotate(7deg) rotateY(-5deg) translateZ(3px);
 	z-index: 11;
-	animation: textflicker 0.05s infinite alternate, blur 0.5s both ease-in;
+	animation: textflicker 0.05s infinite alternate;
 	cursor: pointer;
 }
 
 #sora{
-	position: absolute;
-	display: inline-block;
 	color: rgb(167, 167, 167);
+	z-index: 3;
+}
+
+.sora{
+	position: absolute;
 	top: 1000px;
 	left: 730px;
 	font-size: 400px;
-	/*animation: yureru 0.5s infinite alternate-reverse;*/
+}
+
+.leftSora{
+	position: absolute;
+	top: 150px;
+	left: -300px;
+	font-size: 300px;
+}
+
+.rightSora{
+	position: absolute;
+	top: 50px;
+	left: 400px;
+	font-size: 200px;
 }
 
 #container{
@@ -125,7 +146,6 @@ body{
 	position: absolute;
 	top: 1500px;
 	width: 100%;
-	height: 300px;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 }
@@ -158,6 +178,34 @@ body{
 	font-size: 500px;
 	transform-origin: left bottom;
 	opacity: 0;
+	z-index: 1;
+}
+
+#blackBox{
+	opacity: 0.7;
+	background-color: rgb(83, 51, 25);
+	background-image: url(images/3px-tile.png);
+	position: absolute;
+	transform: rotate(-20deg);
+	height: 200px;
+	width: 120%;
+	top: 2200px;
+	left: -200px;
+	filter: blur(1px);
+	z-index: 1;
+}
+
+#blackBoxLeft{
+	opacity: 0.6;
+	background-color: rgb(83, 52, 25);
+	background-image: url(images/3px-tile.png);
+	position: absolute;
+	transform: rotate(70deg);
+	height: 200px;
+	width: 400%;
+	top: 2300px;
+	right: -2900px;
+	filter: blur(2px);
 	z-index: 1;
 }
 
@@ -231,10 +279,21 @@ body{
     }
 }
 
-@keyframes rotate3D{
-	from{transform: rotate3D(1, 0, 0, 90deg);}
-	to{transform: none;}
+@keyframes flash{
+	from{
+		filter:
+		blur(5px);
+		transform: rotate(10deg);
+	}
+
+	to{
+		filter: 
+		blur(1px)
+		drop-shadow(0 10px 2px rgb(204, 174, 174));;
+		transform: rotate(-10deg);
+	}
 }
+
 .sa{
 	opacity: 0;
 	transition: all 1s ease;
@@ -323,26 +382,99 @@ body{
 	opacity: 0.8;
 }
 
+#nigeru{
+	color: rgb(147, 214, 214);
+	font-size: 50px;
+	position: absolute;
+	top: 6000px;
+	right: 100px;
+	opacity: 0.9;
+	filter: blur(2px);
+	z-index: 1;
+}
+
+#nigeru::first-letter{
+	font-size: 150px;
+}
+
 #taniSpawner{
 	position: absolute;
 	width: 100%;
-	top: 5000px;
-}
-#spawner{
-	position: absolute;
-	width: 100%;
-	top: 7950px;
+	top: 4500px;
 }
 
-#silverFish{
-	display: inline-block;
-	transform: rotate(-90deg);
-	opacity: 0;
-	transition: all 1s ease;
-	
-}
-
-#silverFish.show{
+#tani{
+	color: rgb(228, 210, 210);
+	position: relative;
+	font-size: 0px;
+	animation: flash 2s infinite alternate;
+	transform-origin: top left;
 	opacity: 1;
-	transform: translate(0, 20px);
+	z-index: 10;
+}
+
+#face{
+	color: rgb(20, 20, 20);
+	position: absolute;
+}
+
+.first{
+	top: 4700px;
+	left: -100px;
+	font-size: 1500px;
+	filter: blur(10px);
+	z-index: 15;
+}
+
+.second{
+	top: 6000px;
+	left: 1000px;
+	font-size: 500px;
+	filter: blur(10px);
+	z-index: 15;
+}
+
+#ekiSpawner{
+	position: absolute;
+	top: 7900px;
+	width: 100%;
+	height: 100px;
+}
+
+#eki{
+	color: #b6b6b6;
+	position: fixed;
+	filter: blur(1px);
+	opacity: 0;
+}
+
+.topRight{
+	top: -70px;
+    right: -70px;
+	transform: rotate(-135deg);
+}
+
+.topLeft{
+	top: -70px;
+    left: -70px;
+	transform: rotate(135deg);
+}
+
+.bottomRight{
+	bottom: -70px;
+    right: -70px;
+	transform: rotate(-45deg);
+}
+
+.bottomLeft{
+	bottom: -70px;
+    left: -70px;
+	transform: rotate(45deg);
+}
+
+#titleEnd{
+	position: absolute;
+	top: 6800px;
+	width: 100px;
+	height: 100px;
 }

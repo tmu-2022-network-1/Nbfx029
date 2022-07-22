@@ -11,21 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id = "title">面立つ</div>
+    <div id = "title" class = "reverse">面立つ</div>
     <div id = "titleTrigger"></div>
     <!--<div id = "room"></div>-->
     <div id = "plant">
-        <img src="images/plant.png">
+        <img src="images/plant.png" class = "signTrigger">
     </div>
     <div id = "plantLeft">
     </div>
     <div id = "book">
-        <img src="images/book.png">
+        <img src="images/book.png" class = 'book'>
     </div>
     <div id = "sign">
        <div id = "text">文字出現注意</div>
     </div>
-    <div id = "sora" class = "sa">空</div>
+    <div id = "sora" class = "sa sora">
+        空
+        <div id = "sora" class = "sa rightSora">空</div>
+        <div id = "sora" class = "sa leftSora">空</div>
+    </div>
     <!-- <div id = "mado" class = "sa sa-naname" >窓</div> -->
     <div id = "container">
         <div id = "mado" class = "sa">窓</div>
@@ -43,6 +47,8 @@
     </div>
     <div id = "hu">普</div>
     <div id = "huRight">普</div>
+    <div id = 'blackBox'></div>
+    <div id = 'blackBoxLeft'></div>
     <div id = "allWrapper">
         <div class = "svgWrapper">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.74 175" id = "kou">
@@ -208,8 +214,18 @@
             </svg>
         </div>
     </div>
+    <div id = "nigeru">閂閂</div>
     <div id = "taniSpawner"></div>
+    <div id = "ekiSpawner"></div>
+    <div id = "eki" class = "topRight eki">益</div>
+    <div id = "eki" class = "topLeft eki">益</div>
+    <div id = "eki" class = "bottomRight eki">益</div>
+    <div id = "eki" class = "bottomLeft eki">益</div>
     <div id = "spawner"></div>
+    <div id = "face" class = "first">言</div>
+    <div id = "face" class = "second">言</div>
+    <div id = "face" class = "third">言</div>
+    <div id = "titleEnd"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
