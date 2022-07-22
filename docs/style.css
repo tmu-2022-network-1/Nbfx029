@@ -30,8 +30,6 @@ body{
 	font-size: 100px;
 	width: 600px;
 	height: 600px;
-	top: -100px;
-	left: 100px;
 	z-index: 14;
 	cursor: pointer;
 }
@@ -76,8 +74,8 @@ body{
 
 #book img{
 	position: absolute;
-	bottom: 0;
-	left: -120px;
+	bottom: -100px;
+	left: -220px;
 	transform: rotate(90deg);
 	height: 600px;
 	width: 800px;
