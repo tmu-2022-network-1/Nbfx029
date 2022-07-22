@@ -30,6 +30,8 @@ body{
 	font-size: 100px;
 	width: 600px;
 	height: 600px;
+	top: -100px;
+	left: 100px;
 	z-index: 14;
 	cursor: pointer;
 }
