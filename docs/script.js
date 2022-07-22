@@ -307,7 +307,7 @@ gsap.to('.topRight',{
     trigger: '#titleEnd',
     start: 'top bottom',
     end: 'bottom top',
-    scrub: 0.8
+    scrub: true
   }
 });
 
@@ -319,7 +319,7 @@ gsap.to('.topLeft',{
     trigger: '#titleEnd',
     start: 'top bottom',
     end: 'bottom top',
-    scrub: 0.8
+    scrub: true
   }
 });
 
@@ -331,7 +331,7 @@ gsap.to('.bottomRight',{
     trigger: '#titleEnd',
     start: 'top bottom',
     end: 'bottom top',
-    scrub: 0.8
+    scrub: true
   }
 });
 
@@ -343,6 +343,6 @@ gsap.to('.bottomLeft',{
     trigger: '#titleEnd',
     start: 'top bottom',
     end: 'bottom top',
-    scrub: 0.8
+    scrub: true
   }
 });
